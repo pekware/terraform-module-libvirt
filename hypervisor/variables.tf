@@ -5,3 +5,7 @@ variable "pool_name" {
 variable "bridges" {
   type = map(any)
 }
+
+variable "images" {
+  type = map(any)
+}

@@ -7,5 +7,5 @@ variable "bridges" {
 }
 
 variable "images" {
-  type = map(any)
+  type = list(any)
 }

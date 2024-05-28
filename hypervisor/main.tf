@@ -5,7 +5,10 @@ resource "libvirt_pool" "images" {
 }
 
 resource "libvirt_volume" "cloud-image" {
-  for_each = var.images
+  for_each = {
+    for index, image in var.images :
+    image.name => image
+  }
 
   name   = each.value.name
   pool   = libvirt_pool.images.name

@@ -17,7 +17,10 @@ resource "libvirt_volume" "cloud-image" {
 }
 
 resource "libvirt_network" "bridges" {
-  for_each = var.bridges
+  for_each = {
+    for index, bridge in var.bridges :
+    bridge.name => bridge
+  }
 
   name      = each.value.name
   mode      = "bridge"

@@ -3,7 +3,7 @@ variable "pool_name" {
 }
 
 variable "bridges" {
-  type = map(any)
+  type = list(any)
 }
 
 variable "images" {

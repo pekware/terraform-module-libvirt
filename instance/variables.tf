@@ -29,3 +29,15 @@ variable "meta_data" {
   type    = string
   default = ""
 }
+
+variable "networks" {
+  type = list(any)
+}
+
+variable "memory" {
+  type = string
+}
+
+variable "vcpu" {
+  type = number
+}

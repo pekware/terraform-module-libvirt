@@ -25,6 +25,7 @@ resource "libvirt_domain" "domain-ubuntu" {
 
     content {
       network_name = network_interface.value.network_name
+      mac          = network_interface.value.mac
     }
   }
 

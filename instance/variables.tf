@@ -31,7 +31,10 @@ variable "meta_data" {
 }
 
 variable "networks" {
-  type = list(any)
+  type = list(object({
+    network_name = string
+    mac          = optional(string)
+  }))
 }
 
 variable "memory" {

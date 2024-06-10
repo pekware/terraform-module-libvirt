@@ -14,7 +14,7 @@ module "hypervisor" {
 }
 
 module "cloudinit" {
-  source      = "../../cloudinit-disk/user-data/default-user-with-ssh-pubkeys"
+  source      = "../../cloudinit-disk/default-user-with-ssh-pubkeys"
   username    = "ubuntu"
   ssh_pubkeys = local.ssh_pubkeys
 }
